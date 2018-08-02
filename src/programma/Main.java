@@ -47,13 +47,12 @@ public class Main {
     			StringBuilder sb = new StringBuilder();
 				int plek = 1;
 
-				while(Character.isDigit(tak.charAt(plek))){
+				while(Character.isDigit(tak.charAt(plek))) {
 					sb.append(tak.charAt(plek));
-    				plek++;
+					plek++;
 				}
 
-				//aantalTakjes
-				int aantaltakjes = Integer.parseInt(sb.toString());
+				//in sb.toString zit het aantalTakjes
 
 				//inlezen van de takjes
 				for(int x=plek ; x<tak.length(); x++){
@@ -62,9 +61,9 @@ public class Main {
 					takAanTePassen.addTak(waarde);
 				}
 
-			}//einde van de input????
+			}//einde van de input
 
-			//System.out.println("einde van de input");
+
 
     		//en nu éh
 			//proberen de letters niet meer mee te laten tellen
@@ -78,7 +77,7 @@ public class Main {
 			while(!klaar){
 			    hydraBoom.knip();
 			    aantalKnips++;
-                //System.out.println("knip gelukt");
+
 
 			    klaar = hydraBoom.checkIfKlaar();
             }
@@ -95,13 +94,6 @@ public class Main {
 
     }
 
-	private static int leesGetal(String tak) {
-    	StringBuilder sb = new StringBuilder();
-    	sb.append(tak.charAt(1));
-    	sb.append(tak.charAt(2));
-
-    	return Integer.parseInt(sb.toString());
-	}
 
 
 }

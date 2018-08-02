@@ -56,9 +56,6 @@ public class Tak {
 		takkenLijst.remove(i);
 	}
 
-	public void knip() {
-
-	}
 
 
 }

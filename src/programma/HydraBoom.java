@@ -7,9 +7,7 @@ public class HydraBoom {
 
 
     static Tak vader;
-    static Tak hoofdTak;
 
-    public HydraBoom() {}
 
 
     public void leesStam(String stam) {
@@ -48,7 +46,7 @@ public class HydraBoom {
             }
         }
 
-        //System.out.println(sb.toString());
+
         return sb.toString();
     }
 
@@ -57,12 +55,11 @@ public class HydraBoom {
 
 
         for(int i=0; i<wortel.getAantalTakken(); i++){
-            //System.out.println("nieuwe tak vanuit wortel gevisit");
+
             visitTak(wortel.getTakOpPlek(i), takId);
         }
 
-        //System.out.println("is dit nu de tak die we wouden?");
-        //System.out.println(returnTak.getTakId());
+
         return returnTak;
 
     }
@@ -71,7 +68,7 @@ public class HydraBoom {
 
         if(tak.getTakId() == takId){
             //deze moeten we hebben
-            //System.out.println("tak met "+takId + " gevonden!!");
+
             returnTak = tak;
 
         }
@@ -102,7 +99,6 @@ public class HydraBoom {
         }
         else{
             vader = oudeTak;
-            hoofdTak =  oudeTak;
             knipRecursief(false, oudeTak.getTakOpPlek(0));
             //graak naar de tak met lege ArrayList
             //ga terug naar zijn vader
@@ -118,7 +114,6 @@ public class HydraBoom {
 
         if(!alGeknipt && oudeTak.getAantalTakken()==0){
             vader.removeTakOpPlek(0);
-            //System.out.println(vader.getTakId() + " wordt geknipt");
 
             alGeknipt = true;
 
@@ -131,10 +126,5 @@ public class HydraBoom {
             //doe niets meer
         }
     }
-
-    public void visitTak(Tak tak){
-        for(int i=0; i<tak.getAantalTakken(); i++){}
-    }
-
 
     }
