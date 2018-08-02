@@ -1,1 +1,12 @@
 # 4.1_Hydra
+Het tweede werk van Hercules bestond erin dat hij Hydra moest doden. Hydra had al heel wat hoofden, en telkens Hercules er eentje afhakte, groeiden er twee nieuwe bij ... een onmogelijk werkje voor onze held. In deze opgave maak jij komaf met een variante, waarbij niet een gevaarlijk mythologisch wezen moet afgeslacht worden, maar een hydraboom moet ontdaan worden van al zijn takken. Een hydraboom heeft de volgende eigenschappen: • Je kan er enkel een eindtak van afknippen. • Telkens je een eindtak afknipt, groeit er aan de stam een nieuwe tak bij die identiek is aan de overblijvende tak (inclusief al zijn vertakkingen) waar je net een stuk afknipte. Dat verklaart de naam van de boom! Als de eindtak vasthing aan de stam, dan gebeurt er natuurlijk niets nadat je hem afknipt.
+Als je aan de slag gaat met zo’n hydraboom, dan weet je dat je werk zeker eindigt (dat is gemakkelijk in te zien, maar lastig te bewijzen), maar de vraag die jullie moeten oplossen is: hoeveel takken moet je wegknippen van een gegeven hydraboom, voordat hij helemaal kaal is, m.a.w. enkel de stam overblijft?
+Invoer De eerste regel van de invoer bevat het getal t (1 ≤ t ≤ 50) dat het aantal hydrabomen in de invoer voorstelt. Daarna volgen de beschrijvingen van de t hydrabomen. De eerste regel van een dergelijke beschrijving van een hydraboom is een getal n (1 ≤ n ≤ 50) dat het aantal vertakkingen van de boom aangeeft. De n volgende regels stellen telkens zo’n vertakking voor. Een regel voor een vertakking begint met de naam van de tak waarin de vertakking begint, gevolgd door het aantal kinderen k van die tak (1 ≤ k ≤ 20) en ten slotte de k namen van deze kinderen; alles is van elkaar gescheiden door ´e´en enkele spatie. De vertakkingen staan in willekeurige volgorde. Elke naam van een tak komt juist twee keer voor: ´e´en keer als begin van een vertakking en ´e´en keer als kind van een andere tak. Er zijn twee uitzonderingen: 1) stam geeft de stam aan en komt
+12
+dus nooit voor als kind, en 2) ∗ stelt een eindtak voor zonder verdere vertakking en kan voorkomen als kind van verschillende takken.
+Uitvoer De uitvoer bestaat uit t regels. Op regel i staat het aantal nodige knippen om de i-de hydraboom te reduceren tot zijn stam.
+Voorbeeld Invoer
+2 3 stam 2 a b a 2 * * b 2 * * 7 stam 4 a b c d a 2 e f b 1 * c 1 * d 1 * e 2 * * f 3 * * *
+Uitvoer
+14 264
+Er bestaat een gesloten formule om het aantal te berekenen, maar d
