@@ -26,12 +26,25 @@ public class Tak {
 		takkenLijst.add(new Tak(c));
 	}
 
+	public void addTak(Tak t){
+		takkenLijst.add(t);
+	}
+
 	public int getAantalTakken(){
 		return takkenLijst.size();
 	}
 
 	public Tak getTakOpPlek(int i){
 		return takkenLijst.get(i);
+	}
+
+
+	public void removeTakOpPlek(int i) {
+		takkenLijst.remove(i);
+	}
+
+	public void knip() {
+
 	}
 
 

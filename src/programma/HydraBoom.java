@@ -5,6 +5,9 @@ public class HydraBoom {
 
     static Tak returnTak;
 
+    static Tak vader;
+    static Tak zoon;
+
     public HydraBoom() {}
 
 
@@ -89,9 +92,44 @@ public class HydraBoom {
     }
 
     public void knip() {
-        //moeilijkste methode he
 
+        Tak oudeTak = wortel.getTakOpPlek(0);
+
+        //als de tak enkel een sterretje bevat, en geen subtakken
+        if(oudeTak.getAantalTakken()==0){
+            wortel.removeTakOpPlek(0);
+        }
+        else{
+            knipRecursief(false, oudeTak);
+            //graak naar de tak met lege ArrayList
+            //ga terug naar zijn vader
+            //remove0 van zijn vader
+            Tak geknipteTak = wortel.getTakOpPlek(0);
+            wortel.addTak(geknipteTak);
+
+        }
+    }
+
+    private void knipRecursief(boolean alGeknipt, Tak oudeTak) {
+        //boolean is als er al geknipt is, begint op false
+
+        if(!alGeknipt && oudeTak.getAantalTakken()==0){
+            vader.removeTakOpPlek(0);
+            alGeknipt = true;
+
+        }
+        if(!alGeknipt && oudeTak.getAantalTakken()!=0){
+            vader = oudeTak.getTakOpPlek(0);
+            knipRecursief(false, oudeTak.getTakOpPlek(0));
+        }
+        if(alGeknipt){
+            //doe niets meer
+        }
+    }
+
+    public void visitTak(Tak tak){
+        for(int i=0; i<tak.getAantalTakken(); i++){}
+    }
 
 
     }
-}
