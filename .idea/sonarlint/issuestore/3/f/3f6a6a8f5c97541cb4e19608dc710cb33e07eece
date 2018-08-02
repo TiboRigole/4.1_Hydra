@@ -1,0 +1,13 @@
+
+¤squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«†Šûÿÿÿÿ8¤‹íÖÏ,
+[
+squid:S106/"9Replace this use of System.out or System.err by a logger.(åö¡½úÿÿÿÿ8¤‹íÖÏ,
+[
+squid:S106F"9Replace this use of System.out or System.err by a logger.(‚àŠüÿÿÿÿ8¾·×Ï,
+V
+squid:S1068"9Replace this use of System.out or System.err by a logger.(çÏŸñ8€€¾×Ï,
+V
+squid:S106<"9Replace this use of System.out or System.err by a logger.(€†Ëù8¢Ô×Ï,
+[
+squid:S106="9Replace this use of System.out or System.err by a logger.(òéÄıÿÿÿÿ8¢Ô×Ï,
+Tsquid:S2696G"6Make the enclosing method "static" or remove this set.(ŸÑ¸¯8İã×Ï,
