@@ -44,6 +44,10 @@ public class HydraBoom {
             if (weZittenOverGetal && Character.isLetter(karakter)) {
                 sb.append(karakter);
             }
+
+            if (weZittenOverGetal && karakter == '*'){
+                sb.append('*');
+            }
         }
 
 
