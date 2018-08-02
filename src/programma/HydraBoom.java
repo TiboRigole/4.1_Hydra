@@ -5,8 +5,9 @@ public class HydraBoom {
 
     static Tak returnTak;
 
+
     static Tak vader;
-    static Tak zoon;
+    static Tak hoofdTak;
 
     public HydraBoom() {}
 
@@ -47,7 +48,7 @@ public class HydraBoom {
             }
         }
 
-        System.out.println(sb.toString());
+        //System.out.println(sb.toString());
         return sb.toString();
     }
 
@@ -56,12 +57,12 @@ public class HydraBoom {
 
 
         for(int i=0; i<wortel.getAantalTakken(); i++){
-            System.out.println("nieuwe tak vanuit wortel gevisit");
+            //System.out.println("nieuwe tak vanuit wortel gevisit");
             visitTak(wortel.getTakOpPlek(i), takId);
         }
 
-        System.out.println("is dit nu de tak die we wouden?");
-        System.out.println(returnTak.getTakId());
+        //System.out.println("is dit nu de tak die we wouden?");
+        //System.out.println(returnTak.getTakId());
         return returnTak;
 
     }
@@ -70,7 +71,7 @@ public class HydraBoom {
 
         if(tak.getTakId() == takId){
             //deze moeten we hebben
-            System.out.println("tak met "+takId + " gevonden!!");
+            //System.out.println("tak met "+takId + " gevonden!!");
             returnTak = tak;
 
         }
@@ -100,12 +101,14 @@ public class HydraBoom {
             wortel.removeTakOpPlek(0);
         }
         else{
-            knipRecursief(false, oudeTak);
+            vader = oudeTak;
+            hoofdTak =  oudeTak;
+            knipRecursief(false, oudeTak.getTakOpPlek(0));
             //graak naar de tak met lege ArrayList
             //ga terug naar zijn vader
             //remove0 van zijn vader
-            Tak geknipteTak = wortel.getTakOpPlek(0);
-            wortel.addTak(geknipteTak);
+            Tak geknipteTak = new Tak(wortel.getTakOpPlek(0));
+            wortel.addTak(new Tak(geknipteTak));
 
         }
     }
@@ -115,11 +118,13 @@ public class HydraBoom {
 
         if(!alGeknipt && oudeTak.getAantalTakken()==0){
             vader.removeTakOpPlek(0);
+            //System.out.println(vader.getTakId() + " wordt geknipt");
+
             alGeknipt = true;
 
         }
         if(!alGeknipt && oudeTak.getAantalTakken()!=0){
-            vader = oudeTak.getTakOpPlek(0);
+            vader = oudeTak;
             knipRecursief(false, oudeTak.getTakOpPlek(0));
         }
         if(alGeknipt){

@@ -7,6 +7,7 @@ public class Tak {
 
 	private ArrayList<Tak> takkenLijst;
 
+
 	public Tak(){
 	    takId = '0';
 	    takkenLijst = new ArrayList<Tak>();
@@ -18,9 +19,21 @@ public class Tak {
 		takkenLijst = new ArrayList<Tak>();
 	}
 
+	//copyconstructor
+	public Tak(Tak tak){
+		this.takId = tak.getTakId();
+		this.takkenLijst = new ArrayList<Tak>();
+		for(Tak t : tak.takkenLijst){
+			this.takkenLijst.add(new Tak(t));
+		}
+	}
+
 	//getters
 	public char getTakId(){return takId;}
 
+	public ArrayList<Tak> getTakkenLijst(){
+		return takkenLijst;
+	}
 
 	public void addTak(char c) {
 		takkenLijst.add(new Tak(c));

@@ -64,7 +64,7 @@ public class Main {
 
 			}//einde van de input????
 
-			System.out.println("einde van de input");
+			//System.out.println("einde van de input");
 
     		//en nu éh
 			//proberen de letters niet meer mee te laten tellen
@@ -78,6 +78,8 @@ public class Main {
 			while(!klaar){
 			    hydraBoom.knip();
 			    aantalKnips++;
+                //System.out.println("knip gelukt");
+
 			    klaar = hydraBoom.checkIfKlaar();
             }
 
