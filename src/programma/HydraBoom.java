@@ -80,4 +80,18 @@ public class HydraBoom {
 
     }
 
+    public int getAantalHoofdTakken(){
+        return wortel.getAantalTakken();
+    }
+
+    public boolean checkIfKlaar() {
+        return wortel.getAantalTakken()==0;
+    }
+
+    public void knip() {
+        //moeilijkste methode he
+
+
+
+    }
 }

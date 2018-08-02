@@ -71,28 +71,18 @@ public class Main {
 			//gewoon tot het einde gaan
 			//per verbinding aan de stam werken?
 			//misschien wel een goed idee
-			//
+			int aantalKnips = 0;
+
+			boolean klaar = false;
+
+			while(!klaar){
+			    hydraBoom.knip();
+			    aantalKnips++;
+			    klaar = hydraBoom.checkIfKlaar();
+            }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            System.out.println(aantalKnips);
 
     	}//einde verwerking van 1 hydraboom
 
