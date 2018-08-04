@@ -1,3 +1,5 @@
 
-psquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(áäÚĞ
-wsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(áäÚĞ8…¡Ğ×Ï,
+“squid:S1319""pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ªÏœõúÿÿÿÿ8şİ¬àÏ,
+wsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(áäÚĞ8…¡Ğ×Ï,
+|squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ó”–íùÿÿÿÿ8şİ¬àÏ,
+psquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(áäÚĞ
